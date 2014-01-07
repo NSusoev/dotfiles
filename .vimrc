@@ -1,4 +1,4 @@
-" Setup Pathogen and enable syntax highlighting
+" Setup Pathogen 
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
@@ -64,3 +64,11 @@ set smartcase
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentat
 
+" Python folding
+set nofoldenable
+
+" bind Ctrl+<movement> keys to move around the windows
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
