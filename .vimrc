@@ -1,3 +1,8 @@
+" Plugins list:
+" python-mode 
+" vim-powerline
+" solarized color theme
+
 " Setup Pathogen 
 filetype off
 call pathogen#infect()
@@ -54,11 +59,12 @@ map <Leader>m <esc>:tabnext<CR>
 " map sort function to a key
 noremap <Leader>s :sort<CR>
 
-" Make search case insensitive
+" search
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set ic
 
 " easier moving of code blocks in visual mode
 vnoremap < <gv  " better indentation
@@ -72,3 +78,4 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
