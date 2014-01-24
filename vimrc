@@ -1,7 +1,16 @@
 " Plugins list:
 " python-mode 
 " vim-powerline
-" solarized color theme
+
+if has('gui_running') " global settings of GUI Vim
+    set guioptions-=m " remove the menu
+    set guioptions-=e " remove GUI tabs
+    set guioptions-=T " remove toolbar
+    set guioptions-=r " remove right scrollbar
+    set guioptions-=L " remove left scrollbar
+    set guioptions-=R
+    set guioptions-=l
+endif 
 
 " Setup Pathogen 
 filetype off
@@ -12,14 +21,15 @@ set nocompatible
 set modelines=0
 
 " Show whitespace
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color scheme
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
-set t_Co=16
+set t_Co=256
+set guifont=Monaco\ 12
 
 " Setting for vim-powerline
 set laststatus=2
@@ -28,7 +38,7 @@ set laststatus=2
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-" sable stupid backup and swap files 
+" sable backup and swap files 
 set nobackup
 set nowritebackup
 set noswapfile
@@ -66,6 +76,11 @@ set ignorecase
 set smartcase
 set ic
 
+" Removes highlight of your last search
+noremap <C-n> :nohl<CR>
+vnoremap <C-n> :nohl<CR>
+inoremap <C-n> :nohl<CR>
+
 " easier moving of code blocks in visual mode
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentat
@@ -78,4 +93,3 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-
