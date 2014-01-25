@@ -1,6 +1,9 @@
 " Plugins list:
 " python-mode 
 " vim-powerline
+" NERDTree
+" TComment
+" solarized-color-theme
 
 if has('gui_running') " global settings of GUI Vim
     set guioptions-=m " remove the menu
@@ -93,3 +96,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" bind NERDTree
+map <Leader>t :NERDTreeToggle<CR>
