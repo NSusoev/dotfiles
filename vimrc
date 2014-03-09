@@ -1,9 +1,9 @@
 " Plugins list:
-" python-mode 
+" python-mode
 " vim-powerline
 " NERDTree
 " TComment
-" solarized-color-theme
+" neocomplete
 
 if has('gui_running') " global settings of GUI Vim
     set guioptions-=m " remove the menu
@@ -29,10 +29,10 @@ set modelines=0
 
 " Color scheme
 syntax enable
-set background=light
-colorscheme solarized
+set background = dark
 set t_Co=256
-set guifont=Monaco\ 12
+set guifont=Monaco\ 11
+color codeschool
 
 " Setting for vim-powerline
 set laststatus=2
@@ -85,8 +85,8 @@ vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 
 " easier moving of code blocks in visual mode
-vnoremap < <gv  " better indentation
-vnoremap > >gv  " better indentat
+vnoremap < <gv  
+vnoremap > >gv 
 
 " Python folding
 set nofoldenable
@@ -99,3 +99,9 @@ map <c-h> <c-w>h
 
 " bind NERDTree
 map <Leader>t :NERDTreeToggle<CR>
+
+" enable neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+" disable ropecomplete
+let g:pymode_rope_completion = 0
