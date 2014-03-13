@@ -23,9 +23,9 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
-" Show whitespace
-" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-" au InsertLeave * match ExtraWhitespace /\s\+$/
+" Show whitespaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color scheme
 syntax enable
