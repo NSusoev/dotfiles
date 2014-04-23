@@ -4,6 +4,7 @@
 " NERDTree
 " TComment
 " neocomplete
+" easymotion
 
 if has('gui_running') " global settings of GUI Vim
     set guioptions-=m " remove the menu
@@ -13,9 +14,9 @@ if has('gui_running') " global settings of GUI Vim
     set guioptions-=L " remove left scrollbar
     set guioptions-=R
     set guioptions-=l
-endif 
+endif
 
-" Setup Pathogen 
+" Setup Pathogen
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
@@ -23,16 +24,16 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
-" Show whitespaces
+" Show whitespace
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color scheme
+set background=dark
 syntax enable
-set background = dark
 set t_Co=256
-set guifont=Monaco\ 11
-color codeschool
+set guifont=Monaco\ 14
+color jellybeans
 
 " Setting for vim-powerline
 set laststatus=2
@@ -41,8 +42,7 @@ set laststatus=2
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-" sable backup and swap files 
-set nobackup
+" sable backup and swap files
 set nowritebackup
 set noswapfile
 
@@ -85,8 +85,8 @@ vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 
 " easier moving of code blocks in visual mode
-vnoremap < <gv  
-vnoremap > >gv 
+vnoremap < <gv
+vnoremap > >gv
 
 " Python folding
 set nofoldenable
@@ -99,6 +99,12 @@ map <c-h> <c-w>h
 
 " bind NERDTree
 map <Leader>t :NERDTreeToggle<CR>
+
+" ignore .pyc files
+let NERDTreeIgnore=['\.pyc$']
+
+" disable popups with docs
+set completeopt-=preview
 
 " enable neocomplete
 let g:neocomplete#enable_at_startup = 1
