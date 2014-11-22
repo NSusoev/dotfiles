@@ -92,7 +92,7 @@ NeoBundle 'tomtom/tcomment_vim'
 "NeoBundle 'davidhalter/jedi-vim'
 
 " ---JavaScript ---
-" Improve javascript syntax higlighting, needed for good folding,
+" Improve javascritp syntax higlighting, needed for good folding,
 " and good-looking javascritp code
 "NeoBundle 'jelera/vim-javascript-syntax'
 " Smart indent for javascript
