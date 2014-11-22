@@ -54,78 +54,78 @@ NeoBundle 'tomtom/tcomment_vim'
 ""------------------=== Other ===----------------------
 " Allow autoclose paired characters like [,] or (,),
 " and add smart cursor positioning inside it
-"NeoBundle 'Raimondi/delimitMate'
-"NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'scrooloose/syntastic' " syntax checker
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'scrooloose/syntastic' " syntax checker
 
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
-"if !executable("jshint")
-"    "let g:syntastic_jshint_exec = '~/.vim/node_modules/.bin/jshint'
-"    let g:syntastic_javascript_jshint_exec = '~/.vim/node_modules/.bin/jshint'
-"        if isNpmInstalled && !executable(expand(g:syntastic_javascript_jshint_exec))
-"            silent ! echo 'Installing jshint' && npm --prefix ~/.vim/ install jshint
-"        endif
-"endif
+if !executable("jshint")
+   "let g:syntastic_jshint_exec = '~/.vim/node_modules/.bin/jshint'
+   let g:syntastic_javascript_jshint_exec = '~/.vim/node_modules/.bin/jshint'
+       if isNpmInstalled && !executable(expand(g:syntastic_javascript_jshint_exec))
+           silent ! echo 'Installing jshint' && npm --prefix ~/.vim/ install jshint
+       endif
+endif
 " Path to csslint if it not installed globally, then use local installation
-"if !executable("csslint")
-"   let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
-"        if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
-"            silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
-"        endif
-"endif
+if !executable("csslint")
+  let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
+       if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
+           silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
+       endif
+endif
 
 " Code complete
-"NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
 
 "--------------=== Snippets support ===---------------
 " snippets engine with good integration with neocomplcache
-"NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'honza/vim-snippets'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'honza/vim-snippets'
 
 ""---------------=== Languages support ===-------------
 " --- Python ---
-"NeoBundle 'klen/python-mode'            " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
-"NeoBundle 'mitsuhiko/vim-jinja'     " Jinja support for vim
-"NeoBundle 'vim-scripts/django.vim'
-"NeoBundle 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
-"NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'klen/python-mode'            " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
+NeoBundle 'mitsuhiko/vim-jinja'     " Jinja support for vim
+NeoBundle 'vim-scripts/django.vim'
+NeoBundle 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
+NeoBundle 'davidhalter/jedi-vim'
 
 " ---JavaScript ---
-" Improve javascript syntax higlighting, needed for good folding,
+" Improve javascritp syntax higlighting, needed for good folding,
 " and good-looking javascritp code
-"NeoBundle 'jelera/vim-javascript-syntax'
-" Smart indent for javascript
+NeoBundle 'jelera/vim-javascript-syntax'
+"Smart indent for javascript
 " http://www.vim.org/scripts/script.php?script_id=3081
-"NeoBundle 'lukaszb/vim-web-indent'
+NeoBundle 'lukaszb/vim-web-indent'
 "code-completion for jquery, lodash e.t.c
-"NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
 
 " --- PHP ---
-"NeoBundle 'vim-scripts/php.vim--Garvin'
-"NeoBundle '2072/PHP-Indenting-for-VIm.git'
+NeoBundle 'vim-scripts/php.vim--Garvin'
+NeoBundle '2072/PHP-Indenting-for-VIm.git'
 
 " --- CSS/LESS/HTML5/JSON ---
-"NeoBundle 'tpope/vim-surround' " Parentheses, brackets, quotes, XML tags, and more
-"NeoBundle 'mattn/emmet-vim'
-"NeoBundle 'hail2u/vim-css3-syntax' " CSS3 syntax support
-"NeoBundle 'ap/vim-css-color' " Highlight colors in css files
-"NeoBundle 'groenewege/vim-less'
-"NeoBundle 'miripiruni/vim-better-css-indent'
-"NeoBundle 'leshill/vim-json'
+NeoBundle 'tpope/vim-surround' " Parentheses, brackets, quotes, XML tags, and more
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax' " CSS3 syntax support
+NeoBundle 'ap/vim-css-color' " Highlight colors in css files
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'miripiruni/vim-better-css-indent'
+NeoBundle 'leshill/vim-json'
 " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
-"NeoBundle 'othree/html5.vim'
+NeoBundle 'othree/html5.vim'
 " Highlights the matching HTML tag when the cursor
 " is positioned on a tag.
-"NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'gregsexton/MatchTag'
 " Plugin for changing cursor when entering in insert mode
 " looks like it works fine with iTerm Konsole adn xerm
 " Applies only on next vim launch after NeoBundleInstall
-"NeoBundle 'jszakmeister/vim-togglecursor'
+NeoBundle 'jszakmeister/vim-togglecursor'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-
 
 "=============BUNDLES SETTINGS===================
 
@@ -340,6 +340,7 @@ let g:pymode_run = 0
 " проверка кода в соответствии с PEP8 через <leader>8
 autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 
+
 "------------------------------------------------------
 " NERDTree
 " bind NERDTree
@@ -371,7 +372,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 set background=dark
 syntax enable
 set t_Co=256
-set guifont=Monaco\ 14
+set guifont=Monaco\ 12
 color solarized
 
 " Setting for vim-powerline
