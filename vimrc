@@ -274,11 +274,6 @@ if has("autocmd")
         au BufRead,BufNewFile *.plaintex set ft=plaintex.tex
         au BufRead,BufNewFile *.tmpl setlocal ft=htmljinja
 
-        " Auto close preview window, it uses with tags,
-        " I don't use it
-        autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-        autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
         " Disable vertical line at max string length in NERDTree
         autocmd FileType * setlocal colorcolumn=+1
         autocmd FileType nerdtree setlocal colorcolumn=""
@@ -452,3 +447,9 @@ map <c-h> <c-w>h
 
 " disable popups with docs
 set completeopt-=preview
+
+" Numbers of rows to keep to the left and to the right off the screen
+set scrolloff=10
+
+" Numbers of columns to keep to the left and to the right off the screen
+set sidescrolloff=10
