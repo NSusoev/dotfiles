@@ -57,6 +57,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic' " syntax checker
+NeoBundle 'lordm/vim-browser-reload-linux'
 
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
