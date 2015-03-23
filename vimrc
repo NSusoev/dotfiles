@@ -36,15 +36,6 @@ endif
 "Let NeoNeoBundle manage NeoNeoBundle
 NeoBundle 'Shougo/neobundle.vim'
 
-" Install vimrpoc. is uses by unite and neocomplcache
-" for async searches and calls
-NeoBundle 'Shougo/vimproc', {
-\ 'build' : {
-\     'mac' : 'make -f make_mac.mak',
-\     'unix': g:make
-\    },
-\ }
-
 "---------=== Code/project navigation ===-------------
 NeoBundle 'scrooloose/nerdtree'           " Project and file navigation 
 NeoBundle 'majutsushi/tagbar'             " Class/module browser
@@ -165,10 +156,10 @@ let delimitMate_expand_space = 1
 
 let tern_show_signature_in_pum = 1
 
-" Find all refs for variable under cursor
+" " Find all refs for variable under cursor
 nmap <silent> <leader>tr :TernRefs<CR>
-
-" Smart variable rename
+"
+" " Smart variable rename
 nmap <silent> <leader>tn :TernRename<CR>
 
 "-------------------------
@@ -191,101 +182,21 @@ imap <expr><CR> neosnippet#expandable_or_jumpable() ?
 "-------------------------
 " neocomplcache
 
-" Enable NeocomplCache at startup
+" " Enable NeocomplCache at startup
 let g:neocomplcache_enable_at_startup = 1
 
-" Max items in code-complete
-let g:neocomplcache_max_list = 10
-
-" Max width of code-complete window
-let g:neocomplcache_max_keyword_width = 80
-
-" Code complete is ignoring case until no Uppercase letter is in input
+" " Code complete is ignoring case until no Uppercase letter is in input
 let g:neocomplcache_enable_smart_case = 1
-
-" Auto select first item in code-complete
-let g:neocomplcache_enable_auto_select = 1
-
-" Disable auto popup
-let g:neocomplcache_disable_auto_complete = 1
-
-" Smart tab Behavior
-function! CleverTab()
-    " If autocomplete window visible then select next item in there
-    if pumvisible()
-        return "\<C-n>"
-    endif
-    " If it's begining of the string then return just tab pressed
-    let substr = strpart(getline('.'), 0, col('.') - 1)
-    let substr = matchstr(substr, '[^ \t]*$')
-        if strlen(substr) == 0
-            " nothing to match on empty string
-            return "\<Tab>"
-        else
-        " If not begining of the string,and autocomplete popup is not visible Open this popup
-            return"\<C-x>\<C-u>"
-        endif
-endfunction
-
-inoremap <expr><TAB> CleverTab()
-" Undo autocomplete
-inoremap <expr><C-e> neocomplcache#undo_completion()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-
-" For cursor moving in insert mode
-inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
-inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
-inoremap <expr><Up>    neocomplcache#close_popup() . "\<Up>"
-inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTag
 
 " disable preview in code complete
 set completeopt-=preview
-
-"--------------------------------------------------
-" Aautocmd
-
-" It executes specific command when specific events occured
-" like reading or writing file, or open or close buffer
-if has("autocmd")
-    " Define group of commands,
-    " Commands defined in .vimrc don't bind twice if .vimrc will reload
-    augroup vimrc
-    " Delete any previosly defined autocommands
-    au!
-
-        " Restore cursor position :help last-position-jump
-        au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-          \| exe "normal g'\"" | endif
-
-        " Set filetypes aliases
-        au FileType htmldjango set ft=html.htmldjango
-        au FileType scss set ft=scss.css
-        au FileType less set ft=less.css
-        au BufWinEnter * if line2byte(line("$") + 1) > 100000 | syntax clear | endif
-        au BufRead,BufNewFile *.js set ft=javascript.javascript-jquery
-        au BufRead,BufNewFile *.json set ft=json
-        " Execute python \ -mjson.tool for autoformatting *.json
-        au BufRead,BufNewFile *.bemhtml set ft=javascript
-        au BufRead,BufNewFile *.xjst set ft=javascript
-        au BufRead,BufNewFile *.tt2 set ft=tt2
-        au BufRead,BufNewFile *.plaintex set ft=plaintex.tex
-        au BufRead,BufNewFile *.tmpl setlocal ft=htmljinja
-
-        " Disable vertical line at max string length in NERDTree
-        autocmd FileType * setlocal colorcolumn=+1
-        autocmd FileType nerdtree setlocal colorcolumn=""
-
-        " Enable Folding, uses plugin vim-javascript-syntax
-        au FileType javascript* call JavaScriptFold()
-
-    " Group end
-    augroup END
-
-endif
 
 " Disable choose first function/method at autocomplete
 let g:jedi#popup_select_first = 0
@@ -340,7 +251,7 @@ autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 "------------------------------------------------------
 " NERDTree
 " bind NERDTree
-map <Leader>t :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
 
 " ignore .pyc files
 let NERDTreeIgnore=['\.pyc$']
@@ -368,8 +279,8 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 set background=dark
 syntax enable
 set t_Co=256
-set guifont=Monaco\ 12
-color solarized
+set gfn=Monaco:h16
+color Tomorrow-Night-Blue
 
 " Setting for vim-powerline
 set laststatus=2
