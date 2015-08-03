@@ -37,7 +37,7 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 
 "---------=== Code/project navigation ===-------------
-NeoBundle 'scrooloose/nerdtree'           " Project and file navigation 
+NeoBundle 'scrooloose/nerdtree'           " Project and file navigation
 NeoBundle 'majutsushi/tagbar'             " Class/module browser
 NeoBundle 'Lokaltog/vim-powerline' " status bar
 NeoBundle 'tomtom/tcomment_vim'
@@ -48,7 +48,11 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic' " syntax checker
-NeoBundle 'lordm/vim-browser-reload-linux'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle '29decibel/codeschool-vim-theme'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'fmoralesc/vim-vitamins'
+NeoBundle 'croaker/mustang-vim'
 
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
@@ -73,6 +77,7 @@ NeoBundle 'Shougo/neocomplcache.vim'
 "--------------=== Snippets support ===---------------
 " snippets engine with good integration with neocomplcache
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 
 ""---------------=== Languages support ===-------------
@@ -88,8 +93,8 @@ NeoBundle 'davidhalter/jedi-vim'
 " and good-looking javascritp code
 NeoBundle 'jelera/vim-javascript-syntax'
 "Smart indent for javascript
-" http://www.vim.org/scripts/script.php?script_id=3081
 NeoBundle 'lukaszb/vim-web-indent'
+NeoBundle 'kchmck/vim-coffee-script'
 "code-completion for jquery, lodash e.t.c
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 
@@ -97,7 +102,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'vim-scripts/php.vim--Garvin'
 NeoBundle '2072/PHP-Indenting-for-VIm.git'
 
-" --- CSS/LESS/HTML5/JSON ---
+" --- CSS3/SCSS/LESS/HTML5/JSON ---
 NeoBundle 'tpope/vim-surround' " Parentheses, brackets, quotes, XML tags, and more
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax' " CSS3 syntax support
@@ -105,6 +110,8 @@ NeoBundle 'ap/vim-css-color' " Highlight colors in css files
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'miripiruni/vim-better-css-indent'
 NeoBundle 'leshill/vim-json'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'cakebaker/scss-syntax.vim'
 " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
 NeoBundle 'othree/html5.vim'
 " Highlights the matching HTML tag when the cursor
@@ -279,8 +286,9 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 set background=dark
 syntax enable
 set t_Co=256
+" for macvim
 set gfn=Monaco:h16
-color Tomorrow-Night-Blue
+color solarized
 
 " Setting for vim-powerline
 set laststatus=2
