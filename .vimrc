@@ -79,6 +79,7 @@ NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'ervandew/supertab'
 
 ""---------------=== Languages support ===-------------
 " --- Python ---
