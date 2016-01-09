@@ -113,6 +113,7 @@ NeoBundle 'miripiruni/vim-better-css-indent'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'tpope/vim-haml'
 " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim.
 NeoBundle 'othree/html5.vim'
 " Highlights the matching HTML tag when the cursor
