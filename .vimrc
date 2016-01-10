@@ -48,11 +48,15 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic' " syntax checker
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'fmoralesc/vim-vitamins'
 NeoBundle 'croaker/mustang-vim'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'zeis/vim-kolor'
+NeoBundle 'endel/vim-github-colorscheme'
+NeoBundle 'vim-scripts/wombat256.vim'
 
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
