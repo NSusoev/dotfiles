@@ -92,6 +92,7 @@ NeoBundle 'davidhalter/jedi-vim'
 " ---JavaScript ---
 " Improve javascritp syntax higlighting, needed for good folding,
 " and good-looking javascritp code
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
 "Smart indent for javascript
 NeoBundle 'lukaszb/vim-web-indent'
@@ -123,12 +124,14 @@ NeoBundle 'gregsexton/MatchTag'
 " looks like it works fine with iTerm Konsole adn xerm
 " Applies only on next vim launch after NeoBundleInstall
 NeoBundle 'jszakmeister/vim-togglecursor'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
 "=============BUNDLES SETTINGS===================
+let g:indentLine_char = '|'
 
 " Syntastic
 " Enable autochecks
