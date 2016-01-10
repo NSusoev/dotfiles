@@ -290,7 +290,7 @@ set background=dark
 syntax enable
 set t_Co=256
 " for macvim
-set gfn=Monaco:h16
+set gfn=Monaco:h14
 color solarized
 
 " Setting for vim-powerline
