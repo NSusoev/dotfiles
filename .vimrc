@@ -124,14 +124,12 @@ NeoBundle 'gregsexton/MatchTag'
 " looks like it works fine with iTerm Konsole adn xerm
 " Applies only on next vim launch after NeoBundleInstall
 NeoBundle 'jszakmeister/vim-togglecursor'
-NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
 "=============BUNDLES SETTINGS===================
-let g:indentLine_char = '|'
 
 " Syntastic
 " Enable autochecks
