@@ -86,4 +86,6 @@ alias tc-stop='/Library/Tomcat/bin/shutdown.sh'
 export PATH="/usr/local/mysql/bin:$PATH"
 alias composer="php /usr/bin/composer.phar"
 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
 alias log="git log --pretty=oneline --abbrev-commit"
