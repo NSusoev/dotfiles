@@ -82,6 +82,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Tomcat's shortcurs
 alias tc-start='/Library/Tomcat/bin/startup.sh'
 alias tc-stop='/Library/Tomcat/bin/shutdown.sh'
+alias tc-logs='tail -n 600 /Library/Tomcat/logs/catalina.out'
 
 export PATH="/usr/local/mysql/bin:$PATH"
 alias composer="php /usr/bin/composer.phar"
