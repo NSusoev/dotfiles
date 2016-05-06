@@ -75,18 +75,20 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# zsh
+alias zshconfig="vim ~/.zshrc"
 # Tomcat's shortcurs
 alias tc-start='/Library/Tomcat/bin/startup.sh'
 alias tc-stop='/Library/Tomcat/bin/shutdown.sh'
 alias tc-logs='tail -n 600 /Library/Tomcat/logs/catalina.out'
-
+# MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
-alias composer="php /usr/bin/composer.phar"
-
+# PostgreSQL
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-
+# Git
 alias log="git log --pretty=oneline --abbrev-commit"
+# nginx
+alias nginx-conf="vim /usr/local/etc/nginx/nginx.conf"
+alias nginx-start "nginx"
+alias nginx-stop "nginx -s stop"
