@@ -78,16 +78,21 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # zsh
 alias zshconfig="vim ~/.zshrc"
+
 # Tomcat's shortcurs
 alias tc-start='/Library/Tomcat/bin/startup.sh'
 alias tc-stop='/Library/Tomcat/bin/shutdown.sh'
 alias tc-logs='tail -n 600 /Library/Tomcat/logs/catalina.out'
+
 # MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
+
 # PostgreSQL
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
 # Git
 alias log="git log --pretty=oneline --abbrev-commit"
+
 # nginx
 alias nginx-conf="vim /usr/local/etc/nginx/nginx.conf"
 alias nginx-start "nginx"
