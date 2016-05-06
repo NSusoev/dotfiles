@@ -95,5 +95,5 @@ alias log="git log --pretty=oneline --abbrev-commit"
 
 # nginx
 alias nginx-conf="vim /usr/local/etc/nginx/nginx.conf"
-alias nginx-start "nginx"
-alias nginx-stop "nginx -s stop"
+alias nginx-start="nginx"
+alias nginx-stop="nginx -s stop"
