@@ -91,7 +91,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Git
-alias gl="git log --pretty=oneline --abbrev-commit"
+alias log="git log --pretty=oneline --abbrev-commit"
 alias gs="git status"
 alias gd="git diff"
 alias gp="git pull"
@@ -102,3 +102,7 @@ alias nginx-start="nginx"
 alias nginx-stop="nginx -s stop"
 alias nginx-err="tail -n 600 /usr/local/Cellar/nginx/1.8.0/logs/error.log"
 alias nginx-acc="tail -n 600 /usr/local/Cellar/nginx/1.8.0/logs/access.log"
+
+# Projects
+alias prj="cd ~/Documents/projects"
+
