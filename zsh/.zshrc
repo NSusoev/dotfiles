@@ -91,7 +91,10 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Git
-alias log="git log --pretty=oneline --abbrev-commit"
+alias gl="git log --pretty=oneline --abbrev-commit"
+alias gs="git status"
+alias gd="git diff"
+alias gp="git pull"
 
 # nginx
 alias nginx-conf="vim /usr/local/etc/nginx/nginx.conf"
