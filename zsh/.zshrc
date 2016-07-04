@@ -95,6 +95,7 @@ alias log="git log --pretty=oneline --abbrev-commit"
 alias gs="git status"
 alias gd="git diff"
 alias gp="git pull"
+alias grl="git reflog"
 
 # nginx
 alias nginx-conf="vim /usr/local/etc/nginx/nginx.conf"
